@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: azure;
+  text-decoration: none;
+  padding: 20px;
+}
+header {
+  background-color: rgb(0, 0, 0);
+  color: beige;
+  display: flex;
+}
+.left {
+  display: flex;
+  background-color: black;
+}
+.logo {
+  padding: 20px 40px 20px 200px;
+  /* background-color: brown; */
+}
+.left .items {
+  padding: 20px 40px 20px 0px;
+}
+header .right {
+  background-color: black;
+  display: fixed;
+  padding: 20px 40px 20px 150px;
+  right: 20px;
+}
+.heart {
+  background-color: black;
+  color: blanchedalmond;
+}
