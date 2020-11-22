@@ -2,11 +2,14 @@
 
 $pathDB = "localhost";
 $usernameDB = "root";
-$passwordDB = '';
-$databaseNameDB='deep';
+$passwordDB = 'root22';
+$databaseNameDB='myCheck';
 
 $connection = mysqli_connect($pathDB, $usernameDB, $passwordDB,$databaseNameDB);
 
 if ( !$connection) {
-   echo "error";
+   echo $mysqli -> error;
+}
+else{
+   echo "correct";
 }

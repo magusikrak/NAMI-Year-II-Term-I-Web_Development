@@ -3,7 +3,7 @@ include 'db.php';
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $email = $_POST['email'];
-$phoneNummber = $_POST['phone'];
+$phoneNumber = $_POST['phone'];
 $password = $_POST['password'];
 
 if (isset($_POST['submit'])) {
@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     // echo $phoneNummber;
     // echo $password;
 
-    $query="INSERT INTO `users`(`firstName`,`lastName`,`email`,`phoneNumber`,`password`) VALUES ('$firstName','$lastName','$email','$phoneNummber','$password')";
+    $query="INSERT INTO `users`(`firstName`,`lastName`,`email`,`phoneNumber`,`password`) VALUES ('$firstName','$lastName','$email','$phoneNumber','$password')";
 
     $query_run=mysqli_query($connection,$query);
 
