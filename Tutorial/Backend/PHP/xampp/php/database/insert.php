@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 
     if(!$query_run)
     {
-        echo "error";
+        echo $query_run;
     }
 
 }
