@@ -1,22 +1,19 @@
-<?php 
-$host='localhost';
-$user="root";
-$password="";
-$dbName="formCheck";
+<?php
+$host = 'localhost';
+$username = 'root';
+$password = '';
 
-// SET DSH
+$dbname = 'week7';
+// id name address number
+$pdo=new PDO('mysql:host='. $host. ';dbname=' . $dbname, $username, $password,
+          [ PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
+$newName="sugam";
+$newAddress="KTM";
+$newNumber=0000000000;          
+$result=$pdo->query('SELECT * FROM users');
+$pdo->query("INSERT INTO `users`(`id`, `name`, `address`, `number`) VALUES (101,'$newName','$newAddress','$newNumber')");
 
-$dsn='mysql:host='.$host.';dbname='.$dbName;
+// foreach ($result as $key){
+//     echo $key['id'].'<br>';
 
-// create a PDO instance
-$pdo=new PDO($dsn,$user,$password);
-
-# PDO query
-$stmt=$pdo->query('Select * from users');
-
-// output
-while($row=$stmt->fetch(PDO::FETCH_ASSOC))
-
-{
-    echo $row['id'].'<br>';
-} 
+// }
